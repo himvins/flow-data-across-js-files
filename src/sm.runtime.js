@@ -1,4 +1,4 @@
-this.sys = new sysmogram();
+this.sys = new sm();
 
 this.sys.getObservable().subscribe(function(data){
   // this is the callback function - whenever button is being clicked 
