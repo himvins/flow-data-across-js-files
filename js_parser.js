@@ -2,6 +2,10 @@ function function1() {console.log('function1')}
 function function3() {console.log('function3')}
 function function2() {console.log('function2');function1();function3();}
 
+let string = "{ bla; bla; callBla(), anyOtherBla(1,2), blabla(1,3), blablabla(1)"
+let functionCalls = string.match(/\b\w+\(.*?\)/g);
+console.log(functionCalls)
+
 
 
 function formatCallHierarchy(fn, hierarchy) {
