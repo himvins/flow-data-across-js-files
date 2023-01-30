@@ -8,6 +8,12 @@ A handy and easy-to-use bookmarklet tool for decompressing splunk logs.
 3. Can be used on any page in the browser, including Splunk queries and dashboards.
 4. Allows for easy viewing of multiple request/response payloads on the same screen.
 
+## Features
+- Uses pako.js (https://github.com/nodeca/pako) and inflate method for decompression.
+- Decompresses selected text on any screen.
+- Syntax highlighting for better readability.
+- Copy icon to quickly copy decompressed contents.
+
 ## Usage
 1. Drag the "compressor" link to your browser bookmark bar to import the bookmark.
 2. Select the compressed text on any page.
