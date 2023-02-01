@@ -1,4 +1,1 @@
-ssh user@systemB "bash -l -c '$(cat <<EOF
-# contents of script.sh
-EOF
-)'"
+putty.exe -load <session_name> -ssh -t -m script.txt
