@@ -1,1 +1,1 @@
-ssh user@systemB "bash -l -c 'source ~/.bashrc; source script.sh'"
+ssh user@systemB "bash -l -c 'source ~/.bashrc; $(type script.sh)'"
