@@ -1,1 +1,1 @@
-putty.exe -load <session_name> -ssh -t -m script.txt
+ssh user@systemB "bash -l -c 'source ~/.bashrc; source script.sh'"
