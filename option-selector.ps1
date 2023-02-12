@@ -5,9 +5,9 @@ while ($true) {
   [System.Console]::Clear()
   for ($index = 0; $index -lt $options.Count; $index++) {
     if ($index -eq $selectedIndex) {
-      Write-Host "`t[$($options[$index])]"
+      Write-Host "`t> $($options[$index])" -ForegroundColor Blue
     } else {
-      Write-Host "`t $($options[$index])"
+      Write-Host "`t  $($options[$index])"
     }
   }
 
