@@ -11,3 +11,11 @@ xmlWriter.Flush();
 }
 
 string escapedXmlString = sb.ToString();
+
+/////////////////////////////////////////////////
+
+using System.Text.RegularExpressions;
+
+string xmlString = "<root><message>hello I have 27%be</message></root>";
+string pattern = @"%[0-9a-fA-F]{2}";
+string escapedXmlString = Regex.Replace(xmlString, pattern, m => "&#x" + m.Value.Substring(1) + ";");
