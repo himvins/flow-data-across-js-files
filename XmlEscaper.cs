@@ -61,3 +61,86 @@ foreach (char c in xmlString)
     }
 }
 string escapedXmlString = escapedXmlBuilder.ToString();
+
+///////////////////////////
+
+using NUnit.Framework;
+
+public class DummyClass
+{
+    public int Add(int a, int b)
+    {
+        return a + b;
+    }
+
+    public int Subtract(int a, int b)
+    {
+        return a - b;
+    }
+
+    public int Multiply(int a, int b)
+    {
+        return a * b;
+    }
+
+    public int Divide(int a, int b)
+    {
+        return a / b;
+    }
+}
+
+[TestFixture]
+public class DummyClassTests
+{
+    [Test]
+    public void Add_ShouldReturnCorrectSum()
+    {
+        // Arrange
+        DummyClass dummy = new DummyClass();
+
+        // Act
+        int sum = dummy.Add(2, 3);
+
+        // Assert
+        Assert.AreEqual(5, sum);
+    }
+
+    [Test]
+    public void Subtract_ShouldReturnCorrectDifference()
+    {
+        // Arrange
+        DummyClass dummy = new DummyClass();
+
+        // Act
+        int difference = dummy.Subtract(5, 3);
+
+        // Assert
+        Assert.AreEqual(2, difference);
+    }
+
+    [Test]
+    public void Multiply_ShouldReturnCorrectProduct()
+    {
+        // Arrange
+        DummyClass dummy = new DummyClass();
+
+        // Act
+        int product = dummy.Multiply(2, 3);
+
+        // Assert
+        Assert.AreEqual(6, product);
+    }
+
+    [Test]
+    public void Divide_ShouldReturnCorrectQuotient()
+    {
+        // Arrange
+        DummyClass dummy = new DummyClass();
+
+        // Act
+        int quotient = dummy.Divide(6, 3);
+
+        // Assert
+        Assert.AreEqual(2, quotient);
+    }
+}
