@@ -42,3 +42,10 @@ svg.addEventListener("click", function() {
 var style = document.createElement('style');
 style.innerHTML = 'svg:hover { cursor: pointer;}';
 document.getElementsByTagName('head')[0].appendChild(style);
+
+
+index=<your_index> sourcetype=<your_sourcetype> id=* 
+| stats count by id 
+| where count=1 
+| lookup <lookup_index> <lookup_field> AS id OUTPUTNEW _time 
+| where _time > [ | inputlookup <previous_results_lookup> | stats max(_time) as last_query_time | fields - last_query_time ]
